@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "categories": {
     "banners": "لافتات",
@@ -219,6 +228,7 @@
     "edit_presets_in_theme_settings": "عدّل الإعدادات المسبقة في [إعدادات القالب](/editor?context=theme&category=typography)",
     "edit_variants_in_theme_settings": "عدّل نمط المتغير في [إعدادات القالب](/editor?context=theme&category=variant%20pickers)",
     "enable_filtering_info": "خصّص عوامل التصفية باستخدام [تطبيق Search & Discovery](https://help.shopify.com/manual/online-store/search-and-discovery/filters)",
+    "free_shipping_threshold": "إجمالي سلة التسوق بالعملة الافتراضية لمتجرك. يتم تحويله تلقائيًا للعملات الأخرى. اجعله مطابقًا لأسعار الشحن.",
     "grid_layout_on_mobile": "يُستخدم تخطيط الشبكة للهاتف المحمول",
     "hide_logo_on_home_page_help": "سيبقى الشعار مرئيًا عندما تكون الترويسة الثابتة نشطة",
     "hover_effects": "ينطبق على بطاقات المنتجات والمجموعات",
@@ -692,6 +702,8 @@
     "always_stack_buttons": "تكديس الأزرار دائمًا",
     "aspect_ratio": "نسبة العرض إلى الارتفاع",
     "custom_mobile_media": "إظهار وسائط مختلفة على الهاتف المحمول",
+    "free_shipping_bar": "شريط تقدم الشحن المجاني",
+    "free_shipping_threshold": "حد الشحن المجاني",
     "stack_media_on_mobile": "تراص الوسائط",
     "auto_rotate_announcements": "التدوير التلقائي للإعلانات",
     "auto_rotate_slides": "التدوير التلقائي للشرائح",

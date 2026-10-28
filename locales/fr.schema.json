@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "names": {
     "404": "404",
@@ -176,6 +185,8 @@
     "custom_width": "Largeur personnalisée",
     "enable_video_looping": "Vidéo en boucle",
     "favicon": "Favicon",
+    "free_shipping_bar": "Barre de progression de la livraison gratuite",
+    "free_shipping_threshold": "Seuil de livraison gratuite",
     "heading": "Titre",
     "icon": "Icône",
     "image_icon": "Icône d'image",
@@ -1084,6 +1095,7 @@
   },
   "info": {
     "carousel_layout_on_mobile": "Le carrousel est toujours utilisé sur mobile",
+    "free_shipping_threshold": "Total du panier dans la devise par défaut de votre boutique. Converti automatiquement pour les autres devises. Faites-le correspondre à vos tarifs d'expédition.",
     "video_alt_text": "Décrivez la vidéo pour les utilisateurs de technologies d’assistance",
     "video_autoplay": "Les vidéos seront mises en sourdine par défaut",
     "video_external": "Utilisez une URL YouTube ou Vimeo",

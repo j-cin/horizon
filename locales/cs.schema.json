@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "names": {
     "404": "404",
@@ -182,6 +191,8 @@
     "enable_video_looping": "Opakování videa",
     "favicon": "Favikona",
     "font_family": "Rodina písma",
+    "free_shipping_bar": "Ukazatel postupu k dopravě zdarma",
+    "free_shipping_threshold": "Hranice pro dopravu zdarma",
     "gap": "Mezera",
     "geometric_translate_y": "Geometrický posun na ose Y",
     "heading": "Nadpis",
@@ -1083,6 +1094,7 @@
     "disclosures": "Prohlášení"
   },
   "info": {
+    "free_shipping_threshold": "Celková částka košíku ve výchozí měně obchodu. Pro ostatní měny se přepočítá automaticky. Sladěte ji se sazbami za dopravu.",
     "video_alt_text": "Popište video pro uživatele asistivních technologií",
     "video_autoplay": "Videa budou ve výchozím nastavení ztlumená",
     "video_external": "Použijte URL z YouTube nebo Vimeo",

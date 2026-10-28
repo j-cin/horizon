@@ -1550,6 +1550,20 @@
       },
       {
         "type": "checkbox",
+        "id": "show_free_shipping_bar",
+        "label": "t:settings.free_shipping_bar",
+        "default": false
+      },
+      {
+        "type": "number",
+        "id": "free_shipping_threshold",
+        "label": "t:settings.free_shipping_threshold",
+        "info": "t:info.free_shipping_threshold",
+        "default": 100,
+        "visible_if": "{{ settings.show_free_shipping_bar }}"
+      },
+      {
+        "type": "checkbox",
         "id": "show_installments",
         "label": "t:settings.installments",
         "default": true
