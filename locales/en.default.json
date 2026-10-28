@@ -9,6 +9,8 @@
  */
 {
   "accessibility": {
+    "scroll_story_progress": "Story progress",
+    "go_to_chapter": "Go to chapter {{ index }} of {{ length }}",
     "account": "Account",
     "active_filters": "Active filters:",
     "cart": "Cart",

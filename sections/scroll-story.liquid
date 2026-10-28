@@ -1,0 +1,577 @@
+<script
+  src="{{ 'scroll-story.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
+  endif
+
+  assign chapters = section.blocks | where: 'type', '_scroll-story-chapter'
+
+  # The pinned column spans half the page on desktop and the full width on mobile
+  assign sizes = '(min-width: 750px) 50vw, 100vw'
+  if section.settings.section_width == 'page-width'
+    assign sizes = '(min-width: 750px) calc(var(--page-width) / 2), 100vw'
+  endif
+%}
+
+<div
+  class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+></div>
+
+<div
+  class="
+    section
+    section--{{ section.settings.section_width }}
+    section-scroll-story
+    {% if section.settings.background_color != blank %}color-custom-{{ section.id }}{% endif %}
+    spacing-style
+  "
+  data-testid="scroll-story"
+  style="{% render 'spacing-style', settings: section.settings %}"
+>
+  <scroll-story-component
+    class="scroll-story scroll-story--media-{{ section.settings.media_position }}"
+    style="
+      --scroll-story-media-height: {{ section.settings.media_height }};
+      --scroll-story-chapter-height: {{ section.settings.chapter_height }}svh;
+      --scroll-story-media-fit: {{ section.settings.media_fit }};
+      --scroll-story-media-radius: {{ section.settings.corner_radius }}px;
+      --scroll-story-transition-class: scroll-story scroll-story--{{ section.settings.transition }};
+    "
+  >
+    <div class="scroll-story__media">
+      <div
+        class="scroll-story__media-frame"
+        ref="mediaFrame"
+      >
+        {% for chapter in chapters %}
+          {% liquid
+            assign image = chapter.settings.image
+            assign loading = 'lazy'
+            if forloop.first and section.index <= 2
+              assign loading = 'eager'
+            endif
+
+            if image != blank
+              assign image_style = 'object-position: ' | append: image.presentation.focal_point | append: ';'
+            endif
+          %}
+          <div
+            class="scroll-story__media-item{% if forloop.first %} is-active{% endif %}"
+            ref="mediaItems[]"
+          >
+            {% if image != blank %}
+              {{
+                image
+                | image_url: width: 3840
+                | image_tag: class: 'scroll-story__image',
+                  widths: '416, 600, 832, 1200, 1600, 1920, 2560, 3840',
+                  sizes: sizes,
+                  loading: loading,
+                  style: image_style
+              }}
+            {% else %}
+              {{ 'hero-apparel-' | append: forloop.index | placeholder_svg_tag: 'scroll-story__image placeholder-svg' }}
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+
+      {% if section.settings.show_progress and chapters.size > 1 %}
+        <nav
+          class="scroll-story__progress"
+          aria-label="{{ 'accessibility.scroll_story_progress' | t }}"
+        >
+          {% for chapter in chapters %}
+            <button
+              type="button"
+              class="scroll-story__progress-button"
+              ref="progressButtons[]"
+              data-index="{{ forloop.index0 }}"
+              on:click="/goToChapter"
+              aria-label="{{ 'accessibility.go_to_chapter' | t: index: forloop.index, length: forloop.length }}"
+              {% if forloop.first %}
+                aria-current="step"
+              {% endif %}
+            ></button>
+          {% endfor %}
+        </nav>
+      {% endif %}
+    </div>
+
+    <div class="scroll-story__chapters">
+      {% content_for 'blocks' %}
+    </div>
+  </scroll-story-component>
+</div>
+
+{% stylesheet %}
+  .scroll-story {
+    --scroll-story-gap: var(--gap-3xl);
+    --scroll-story-sticky-top: var(--sticky-header-offset, 0px);
+    --scroll-story-duration: 0.6s;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: var(--scroll-story-gap);
+  }
+
+  .scroll-story__media {
+    position: sticky;
+    top: var(--scroll-story-sticky-top);
+    z-index: var(--layer-raised);
+    height: 50svh;
+    align-self: start;
+  }
+
+  .scroll-story__media-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--scroll-story-media-radius);
+    contain: paint;
+  }
+
+  .scroll-story__media-item {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .scroll-story__media-item.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .scroll-story__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: var(--scroll-story-media-fit, cover);
+  }
+
+  .scroll-story__chapters {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Progress indicator */
+  .scroll-story__progress {
+    position: absolute;
+    inset-block-end: var(--padding-md);
+    inset-inline: 0;
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-xs);
+    pointer-events: none;
+  }
+
+  .scroll-story__progress-button {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgb(var(--color-foreground-rgb) / var(--opacity-30));
+    pointer-events: auto;
+    cursor: pointer;
+    transition: background-color var(--animation-speed) var(--animation-easing),
+      transform var(--animation-speed) var(--animation-easing);
+
+    /* Keep the hit area at a usable size while the dot stays small */
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -10px;
+    }
+  }
+
+  .scroll-story__progress-button[aria-current='step'] {
+    background-color: var(--color-foreground);
+    transform: scale(1.25);
+  }
+
+  @media screen and (min-width: 750px) {
+    .scroll-story {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .scroll-story__media {
+      height: var(--scroll-story-media-height);
+      max-height: calc(100svh - var(--scroll-story-sticky-top));
+    }
+
+    .scroll-story--media-right .scroll-story__media {
+      order: 2;
+    }
+
+    .scroll-story__progress {
+      inset-block: 0;
+      inset-inline: auto var(--padding-md);
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .scroll-story--media-right .scroll-story__progress {
+      inset-inline: var(--padding-md) auto;
+    }
+  }
+
+  /* Fallback swap where same-document view transitions are unavailable */
+  @supports not (view-transition-name: none) {
+    @media (prefers-reduced-motion: no-preference) {
+      .scroll-story__media-item {
+        transition: opacity var(--scroll-story-duration) var(--animation-easing),
+          visibility var(--scroll-story-duration);
+      }
+    }
+  }
+
+  /* View transitions — only the instance currently swapping is named */
+  @media (prefers-reduced-motion: no-preference) {
+    html:active-view-transition-type(scroll-story) scroll-story-component[data-transitioning] .scroll-story__media-frame {
+      view-transition-name: scroll-story-media;
+      view-transition-class: var(--scroll-story-transition-class);
+    }
+
+    ::view-transition-group(*.scroll-story) {
+      animation-duration: var(--scroll-story-duration);
+      animation-timing-function: var(--animation-easing);
+    }
+
+    ::view-transition-old(*.scroll-story),
+    ::view-transition-new(*.scroll-story) {
+      height: 100%;
+      object-fit: cover;
+      animation-duration: var(--scroll-story-duration);
+      animation-timing-function: var(--animation-easing);
+    }
+
+    /* Zoom */
+    ::view-transition-old(*.scroll-story--zoom) {
+      animation-name: scroll-story-fade-out;
+    }
+
+    ::view-transition-new(*.scroll-story--zoom) {
+      animation-name: scroll-story-zoom-in;
+    }
+
+    /* Slide — direction follows the scroll */
+    ::view-transition-group(*.scroll-story--slide) {
+      overflow: clip;
+    }
+
+    html:active-view-transition-type(scroll-story-forward) {
+      &::view-transition-old(*.scroll-story--slide) {
+        animation-name: scroll-story-slide-out-up;
+      }
+
+      &::view-transition-new(*.scroll-story--slide) {
+        animation-name: scroll-story-slide-in-up;
+      }
+    }
+
+    html:active-view-transition-type(scroll-story-backward) {
+      &::view-transition-old(*.scroll-story--slide) {
+        animation-name: scroll-story-slide-out-down;
+      }
+
+      &::view-transition-new(*.scroll-story--slide) {
+        animation-name: scroll-story-slide-in-down;
+      }
+    }
+  }
+
+  @keyframes scroll-story-fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes scroll-story-zoom-in {
+    from {
+      opacity: 0;
+      transform: scale(1.08);
+    }
+  }
+
+  @keyframes scroll-story-slide-out-up {
+    to {
+      transform: translateY(-100%);
+    }
+  }
+
+  @keyframes scroll-story-slide-in-up {
+    from {
+      transform: translateY(100%);
+    }
+  }
+
+  @keyframes scroll-story-slide-out-down {
+    to {
+      transform: translateY(100%);
+    }
+  }
+
+  @keyframes scroll-story-slide-in-down {
+    from {
+      transform: translateY(-100%);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.scroll_story",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "_scroll-story-chapter"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "t:settings.section_width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "t:options.page"
+        },
+        {
+          "value": "full-width",
+          "label": "t:options.full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "select",
+      "id": "media_position",
+      "label": "t:settings.media_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.direction_start"
+        },
+        {
+          "value": "right",
+          "label": "t:options.direction_end"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "chapter_height",
+      "label": "t:settings.chapter_height",
+      "info": "t:info.scroll_story_chapter_height",
+      "min": 50,
+      "max": 150,
+      "step": 10,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "t:content.media"
+    },
+    {
+      "type": "select",
+      "id": "media_height",
+      "label": "t:settings.media_height",
+      "options": [
+        {
+          "value": "60svh",
+          "label": "t:options.medium"
+        },
+        {
+          "value": "80svh",
+          "label": "t:options.large"
+        },
+        {
+          "value": "100svh",
+          "label": "t:options.full_screen"
+        }
+      ],
+      "default": "100svh"
+    },
+    {
+      "type": "select",
+      "id": "media_fit",
+      "label": "t:settings.media_fit",
+      "options": [
+        {
+          "value": "cover",
+          "label": "t:options.cover"
+        },
+        {
+          "value": "contain",
+          "label": "t:options.contain"
+        }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "range",
+      "id": "corner_radius",
+      "label": "t:settings.corner_radius",
+      "min": 0,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "select",
+      "id": "transition",
+      "label": "t:settings.animation",
+      "options": [
+        {
+          "value": "fade",
+          "label": "t:options.fade"
+        },
+        {
+          "value": "zoom",
+          "label": "t:options.subtle_zoom"
+        },
+        {
+          "value": "slide",
+          "label": "t:options.slide_up"
+        }
+      ],
+      "default": "fade"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_progress",
+      "label": "t:settings.show_progress",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.scroll_story",
+      "category": "t:categories.storytelling",
+      "blocks": {
+        "chapter_1": {
+          "type": "_scroll-story-chapter",
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "t:html_defaults.scroll_story_heading_1",
+                "type_preset": "h3"
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "t:html_defaults.scroll_story_text_1"
+              }
+            }
+          },
+          "block_order": ["heading", "text"]
+        },
+        "chapter_2": {
+          "type": "_scroll-story-chapter",
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "t:html_defaults.scroll_story_heading_2",
+                "type_preset": "h3"
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "t:html_defaults.scroll_story_text_2"
+              }
+            }
+          },
+          "block_order": ["heading", "text"]
+        },
+        "chapter_3": {
+          "type": "_scroll-story-chapter",
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "t:html_defaults.scroll_story_heading_3",
+                "type_preset": "h3"
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "t:html_defaults.scroll_story_text_3"
+              }
+            },
+            "button": {
+              "type": "button",
+              "settings": {
+                "label": "t:text_defaults.shop_now_button_label",
+                "link": "shopify://collections/all"
+              }
+            }
+          },
+          "block_order": ["heading", "text", "button"]
+        }
+      },
+      "block_order": ["chapter_1", "chapter_2", "chapter_3"]
+    }
+  ]
+}
+{% endschema %}

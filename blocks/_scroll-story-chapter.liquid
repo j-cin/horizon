@@ -1,0 +1,182 @@
+{%- doc -%}
+  A single chapter of the scroll-story section. The section reads this block's image setting to
+  build the pinned media column; this block only renders the chapter's text content.
+{%- enddoc -%}
+
+<div
+  class="scroll-story__chapter spacing-style{% if block.settings.toggle_card %} scroll-story__chapter--card{% endif %}"
+  ref="chapters[]"
+  style="{% render 'spacing-style', settings: block.settings %}"
+  {{ block.shopify_attributes }}
+>
+  <div
+    class="scroll-story__chapter-content group-block-content layout-panel-flex layout-panel-flex--column"
+    style="{% render 'layout-panel-style', settings: block.settings %}"
+  >
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% stylesheet %}
+  .scroll-story__chapter {
+    display: flex;
+    align-items: center;
+    min-height: var(--scroll-story-chapter-height, 100svh);
+  }
+
+  .scroll-story__chapter-content {
+    height: auto;
+  }
+
+  .scroll-story__chapter--card .scroll-story__chapter-content {
+    padding: var(--padding-2xl);
+    background-color: var(--color-background);
+    border-radius: var(--style-border-radius-popover);
+  }
+
+  /* On mobile the pinned media covers the top of the viewport, so chapters start below it */
+  @media screen and (max-width: 749px) {
+    .scroll-story__chapter {
+      align-items: flex-end;
+      min-height: calc(var(--scroll-story-chapter-height, 100svh) * 0.75);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.chapter",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "text"
+    },
+    {
+      "type": "button"
+    },
+    {
+      "type": "jumbo-text"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:settings.image",
+      "info": "t:info.scroll_story_chapter_image"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment_flex_direction_column",
+      "label": "t:settings.alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "t:options.direction_start"
+        },
+        {
+          "value": "center",
+          "label": "t:options.direction_center"
+        },
+        {
+          "value": "flex-end",
+          "label": "t:options.direction_end"
+        }
+      ],
+      "default": "flex-start"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "checkbox",
+      "id": "toggle_card",
+      "label": "t:settings.background",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.chapter",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "t:html_defaults.scroll_story_heading_1",
+            "type_preset": "h3"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "t:html_defaults.scroll_story_text_1"
+          }
+        }
+      },
+      "block_order": ["heading", "text"]
+    }
+  ]
+}
+{% endschema %}

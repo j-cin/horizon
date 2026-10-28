@@ -166,6 +166,12 @@
     "navigation": "Navigation"
   },
   "html_defaults": {
+    "scroll_story_heading_1": "<h3>Where it started</h3>",
+    "scroll_story_text_1": "<p>Tell the story of how your brand began: the problem you saw, and the first thing you made to solve it.</p>",
+    "scroll_story_heading_2": "<h3>How it is made</h3>",
+    "scroll_story_text_2": "<p>Walk customers through your materials, your process and the people behind every piece.</p>",
+    "scroll_story_heading_3": "<h3>Made to last</h3>",
+    "scroll_story_text_3": "<p>Close with what makes the finished product worth owning, and invite them to shop.</p>",
     "join_our_email_list": "<h2>Join our email list</h2>",
     "get_exclusive_deals_and_early_access_to_new_products": "<p>Get exclusive deals and early access to new products.</p>",
     "artistry_in_action": "<p>Artistry in action </p>",
@@ -223,6 +229,8 @@
     "work_quickly_to_ship": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>"
   },
   "info": {
+    "scroll_story_chapter_height": "Height of each chapter relative to the screen. Taller chapters hold each image longer.",
+    "scroll_story_chapter_image": "Pinned beside this chapter while it scrolls past",
     "actions_display_style": "Icons are always used on mobile",
     "applies_on_image_only": "Applies to images only",
     "aspect_ratio_adjusted": "Adjusted in some layouts",
@@ -253,6 +261,8 @@
     "media_type_info": "Features are populated from your menu links"
   },
   "names": {
+    "scroll_story": "Scroll story",
+    "chapter": "Chapter",
     "column": "Column",
     "product_title": "Product title",
     "custom_liquid": "Custom Liquid",
@@ -422,6 +432,7 @@
     "comparison_slider": "Comparison slider"
   },
   "options": {
+    "fade": "Fade",
     "above_carousel": "Above carousel",
     "accent": "Accent",
     "all": "All",
@@ -747,6 +758,8 @@
     "below_media": "Below media"
   },
   "settings": {
+    "chapter_height": "Chapter height",
+    "show_progress": "Show progress indicator",
     "accordion": "Accordion",
     "account": "Account",
     "actions_display_style": "Menu style",
