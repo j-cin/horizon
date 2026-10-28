@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "accessibility": {
     "account": "اکاؤنٹ",
@@ -7,6 +16,7 @@
     "close_dialog": "ڈائیلاگ بند کریں",
     "country_region": "ملک/علاقہ",
     "country_results_count": "{{ count }} نتائج",
+    "free_shipping_progress": "مفت شپنگ کی جانب پیش رفت",
     "product_details": "پروڈکٹ کی تفصیلات",
     "show_product_details": "{{ product_name }} کے لیے پروڈکٹ کی تفصیلات دکھائیں",
     "show_submenu": "{{ title }} کا سب مینو دکھائیں",
@@ -144,6 +154,8 @@
     "cancel": "منسوخ کریں",
     "discount": "ڈسکاؤنٹ",
     "account_title": "اکاؤنٹ",
+    "free_shipping_remaining": "مفت شپنگ کے لیے {{ amount }} باقی ہیں",
+    "free_shipping_unlocked": "آپ کو مفت شپنگ مل گئی ہے",
     "terms_and_policies": "شرائط اور پالیسیاں",
     "account_title_personalized": "ہیلو {{ first_name }}",
     "account_orders": "آرڈر",

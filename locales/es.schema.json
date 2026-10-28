@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "names": {
     "404": "404",
@@ -182,6 +191,8 @@
     "enable_video_looping": "Repetición de video",
     "favicon": "Favicon",
     "font_family": "Familia de fuentes",
+    "free_shipping_bar": "Barra de progreso de envío gratis",
+    "free_shipping_threshold": "Umbral de envío gratis",
     "gap": "Separación",
     "geometric_translate_y": "Traslación geométrica en Y",
     "heading": "Título",
@@ -1084,6 +1095,7 @@
   },
   "info": {
     "carousel_layout_on_mobile": "En dispositivos móviles siempre se usa el carrusel",
+    "free_shipping_threshold": "Total del carrito en la moneda predeterminada de tu tienda. Se convierte automáticamente para otras monedas. Haz que coincida con tus tarifas de envío.",
     "video_alt_text": "Describe el video para personas usuarias de tecnologías de asistencia",
     "video_autoplay": "Los videos estarán silenciados de forma predeterminada",
     "video_external": "Usa una URL de YouTube o Vimeo",

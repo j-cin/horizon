@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "blocks": {
     "load_video": "ビデオを読み込む: {{ description }}",
@@ -20,6 +29,7 @@
     "slider_label": "スライダー"
   },
   "accessibility": {
+    "free_shipping_progress": "送料無料までの進捗",
     "play_model": "3Dモデルを再生",
     "play_video": "ビデオを再生",
     "unit_price": "単価",
@@ -121,6 +131,8 @@
     "back_to_main_menu": "メインメニューに戻る"
   },
   "content": {
+    "free_shipping_remaining": "あと{{ amount }}で送料無料",
+    "free_shipping_unlocked": "送料無料になりました",
     "reviews": "レビュー",
     "language": "言語",
     "localization_region_and_language": "地域と言語",

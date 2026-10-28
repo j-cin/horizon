@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "names": {
     "404": "404",
@@ -182,6 +191,8 @@
     "enable_video_looping": "ビデオのループ再生",
     "favicon": "ファビコン",
     "font_family": "フォントファミリー",
+    "free_shipping_bar": "送料無料プログレスバー",
+    "free_shipping_threshold": "送料無料の基準額",
     "gap": "間隔",
     "geometric_translate_y": "幾何学的なY軸移動",
     "heading": "見出し",
@@ -1083,6 +1094,7 @@
     "disclosures": "開示情報"
   },
   "info": {
+    "free_shipping_threshold": "ストアのデフォルト通貨でのカート合計額です。他の通貨には自動的に換算されます。配送料の設定と一致させてください。",
     "video_alt_text": "支援技術のユーザーのために動画の説明を記述します",
     "video_autoplay": "動画はデフォルトでミュートになります",
     "video_external": "YouTubeまたはVimeoのURLを使用します",

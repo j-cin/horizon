@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "names": {
     "404": "404",
@@ -182,6 +191,8 @@
     "enable_video_looping": "การเล่นวิดีโอวนซ้ำ",
     "favicon": "Favicon",
     "font_family": "ชุดแบบอักษร",
+    "free_shipping_bar": "แถบความคืบหน้าการจัดส่งฟรี",
+    "free_shipping_threshold": "ยอดขั้นต่ำสำหรับการจัดส่งฟรี",
     "gap": "ช่องว่าง",
     "geometric_translate_y": "การแปลงตำแหน่งแกน Y เชิงเรขาคณิต",
     "heading": "หัวเรื่อง",
@@ -1083,6 +1094,7 @@
     "disclosures": "การเปิดเผยข้อมูล"
   },
   "info": {
+    "free_shipping_threshold": "ยอดรวมในตะกร้าเป็นสกุลเงินเริ่มต้นของร้านค้า แปลงเป็นสกุลเงินอื่นโดยอัตโนมัติ ควรตั้งให้ตรงกับอัตราค่าจัดส่ง",
     "video_alt_text": "โปรดอธิบายวิดีโอสำหรับผู้ใช้เทคโนโลยีความช่วยเหลือพิเศษ",
     "video_autoplay": "วิดีโอจะถูกปิดเสียงตามค่าเริ่มต้น",
     "video_external": "ใช้ URL ของ YouTube หรือ Vimeo",

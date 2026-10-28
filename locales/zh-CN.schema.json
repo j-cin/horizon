@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "names": {
     "404": "404",
@@ -182,6 +191,8 @@
     "enable_video_looping": "视频循环",
     "favicon": "网站图标",
     "font_family": "字体系列",
+    "free_shipping_bar": "免运费进度条",
+    "free_shipping_threshold": "免运费门槛",
     "gap": "间距",
     "geometric_translate_y": "几何 Y 轴平移",
     "heading": "标题",
@@ -1083,6 +1094,7 @@
     "disclosures": "披露信息"
   },
   "info": {
+    "free_shipping_threshold": "以商店默认货币计的购物车总额。其他货币会自动换算。请与您的运费设置保持一致。",
     "video_alt_text": "为使用辅助技术的用户描述视频",
     "video_autoplay": "视频将默认静音",
     "video_external": "使用 YouTube 或 Vimeo URL",

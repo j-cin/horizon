@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "blocks": {
     "load_video": "Videó betöltése: {{ description }}",
@@ -20,6 +29,7 @@
     "slider_label": "Csúszka"
   },
   "accessibility": {
+    "free_shipping_progress": "Előrehaladás az ingyenes szállítás felé",
     "play_model": "3D-modell lejátszása",
     "play_video": "Videó lejátszása",
     "unit_price": "Egységár",
@@ -121,6 +131,8 @@
     "back_to_main_menu": "Vissza a főmenübe"
   },
   "content": {
+    "free_shipping_remaining": "Még {{ amount }} az ingyenes szállításig",
+    "free_shipping_unlocked": "Ingyenes szállítást kapsz",
     "reviews": "összegzés",
     "no_results_found": "Nincs találat",
     "language": "Nyelv",

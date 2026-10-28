@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "categories": {
     "banners": "באנרים",
@@ -219,6 +228,7 @@
     "edit_presets_in_theme_settings": "ערוך קביעות מראש ב[הגדרות ערכת הנושא](/editor?context=theme&category=typography)",
     "edit_variants_in_theme_settings": "ערוך עיצוב גרסאות ב[הגדרות ערכת הנושא](/editor?context=theme&category=variant%20pickers)",
     "enable_filtering_info": "התאם אישית מסננים באמצעות [היישום Search & Discovery](https://help.shopify.com/manual/online-store/search-and-discovery/filters)",
+    "free_shipping_threshold": "סכום העגלה במטבע ברירת המחדל של החנות. מומר אוטומטית למטבעות אחרים. יש להתאים אותו לתעריפי המשלוח.",
     "grid_layout_on_mobile": "נעשה שימוש בפריסת רשת עבור נייד",
     "hide_logo_on_home_page_help": "הלוגו יישאר גלוי כאשר כותרת דביקה מופעלת",
     "hover_effects": "חל על כרטיסי מוצרים ואוספים",
@@ -692,6 +702,8 @@
     "always_stack_buttons": "ערוך לחצנים תמיד בערימה",
     "aspect_ratio": "יחס רוחב-גובה",
     "custom_mobile_media": "הצג מדיה שונה בנייד",
+    "free_shipping_bar": "סרגל התקדמות למשלוח חינם",
+    "free_shipping_threshold": "סף למשלוח חינם",
     "stack_media_on_mobile": "ערוך מדיה בערימה",
     "auto_rotate_announcements": "תחלופה אוטומטית של הודעות",
     "auto_rotate_slides": "תחלופה אוטומטית של שקופיות",

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "names": {
     "404": "404",
@@ -182,6 +191,8 @@
     "enable_video_looping": "Videolooping",
     "favicon": "Favorittikon",
     "font_family": "Skriftfamilie",
+    "free_shipping_bar": "Fremdriftslinje for gratis frakt",
+    "free_shipping_threshold": "Grense for gratis frakt",
     "gap": "Mellomrom",
     "geometric_translate_y": "Geometrisk translasjon Y",
     "heading": "Overskrift",
@@ -1084,6 +1095,7 @@
   },
   "info": {
     "carousel_layout_on_mobile": "Karusell brukes alltid på mobil",
+    "free_shipping_threshold": "Handlekurvens totalsum i butikkens standardvaluta. Konverteres automatisk for andre valutaer. Tilpass den til fraktprisene dine.",
     "video_alt_text": "Beskriv videoen for brukere av hjelpeteknologi",
     "video_autoplay": "Videoer dempes som standard",
     "video_external": "Bruk en URL-adresse fra YouTube eller Vimeo",

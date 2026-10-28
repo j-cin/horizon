@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "accessibility": {
     "account": "الحساب",
@@ -7,6 +16,7 @@
     "close_dialog": "إغلاق مربع الحوار",
     "country_region": "البلد/المنطقة",
     "country_results_count": "{{ count }} من النتائج",
+    "free_shipping_progress": "التقدم نحو الشحن المجاني",
     "product_details": "تفاصيل المنتج",
     "show_product_details": "عرض تفاصيل المنتج لـ {{ product_name }}",
     "show_submenu": "عرض القائمة الفرعية لـ {{ title }}",
@@ -156,6 +166,8 @@
     "cancel": "إلغاء",
     "discount": "الخصم",
     "account_title": "الحساب",
+    "free_shipping_remaining": "تبقّى {{ amount }} للحصول على شحن مجاني",
+    "free_shipping_unlocked": "لقد حصلت على شحن مجاني",
     "terms_and_policies": "الشروط والسياسات",
     "account_title_personalized": "مرحبًا {{ first_name }}",
     "account_orders": "الطلبات",

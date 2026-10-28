@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "categories": {
     "banners": "بینر",
@@ -219,6 +228,7 @@
     "edit_presets_in_theme_settings": "پری سیٹ میں [تھیم کی سیٹنگز](/editor?context=theme&category=typography) میں ترمیم کریں",
     "edit_variants_in_theme_settings": "ویریئنٹ کی سٹائلنگ میں [تھیم کی سیٹنگز](/editor?context=theme&category=variant%20pickers) میں ترمیم کریں",
     "enable_filtering_info": "[Search & Discovery ایپ](https://help.shopify.com/manual/online-store/search-and-discovery/filters) کے ساتھ فلٹر کو حسب ضرورت بنائیں",
+    "free_shipping_threshold": "آپ کے اسٹور کی ڈیفالٹ کرنسی میں کارٹ کا کل۔ دیگر کرنسیوں کے لیے خودکار طور پر تبدیل ہوتا ہے۔ اسے اپنے شپنگ ریٹس کے مطابق رکھیں۔",
     "grid_layout_on_mobile": "موبائل کے لیے گرڈ لے آؤٹ استعمال ہوتا ہے",
     "hide_logo_on_home_page_help": "سٹکی ہیڈر فعال ہونے پر لوگو ظاہر رہے گا",
     "hover_effects": "پروڈکٹ اور کلیکشن کارڈ پر لاگو ہوتا ہے",
@@ -692,6 +702,8 @@
     "always_stack_buttons": "بٹن کو ہمیشہ اسٹیک کریں",
     "aspect_ratio": "ایسپیکٹ ریشو",
     "custom_mobile_media": "موبائل پر مختلف میڈیا دکھائیں",
+    "free_shipping_bar": "مفت شپنگ پیش رفت بار",
+    "free_shipping_threshold": "مفت شپنگ کی حد",
     "stack_media_on_mobile": "میڈیا اسٹیک کریں",
     "auto_rotate_announcements": "اعلانات خودکار روٹیٹ کریں",
     "auto_rotate_slides": "سلائیڈ خودکار روٹیٹ کریں",

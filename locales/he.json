@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "accessibility": {
     "account": "חשבון",
@@ -7,6 +16,7 @@
     "close_dialog": "סגירת הדו-שיח",
     "country_region": "מדינה/אזור",
     "country_results_count": "{{ count }} תוצאות",
+    "free_shipping_progress": "התקדמות לקראת משלוח חינם",
     "product_details": "פרטי המוצר",
     "show_product_details": "הצגת פרטי המוצר של {{ product_name }}",
     "show_submenu": "הצגת תפריט המשנה של {{ title }}",
@@ -150,6 +160,8 @@
     "cancel": "ביטול",
     "discount": "הנחה",
     "account_title": "חשבון",
+    "free_shipping_remaining": "נותרו {{ amount }} למשלוח חינם",
+    "free_shipping_unlocked": "קיבלת משלוח חינם",
     "terms_and_policies": "תנאים ומדיניות",
     "account_title_personalized": "היי {{ first_name }}",
     "account_orders": "הזמנות",

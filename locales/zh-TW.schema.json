@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "names": {
     "404": "404",
@@ -182,6 +191,8 @@
     "enable_video_looping": "影片循環播放",
     "favicon": "favicon",
     "font_family": "字型系列",
+    "free_shipping_bar": "免運費進度列",
+    "free_shipping_threshold": "免運費門檻",
     "gap": "間距",
     "geometric_translate_y": "幾何平移 Y",
     "heading": "標題",
@@ -1084,6 +1095,7 @@
   },
   "info": {
     "carousel_layout_on_mobile": "在行動裝置上一律使用輪播",
+    "free_shipping_threshold": "以商店預設貨幣計算的購物車總額。其他貨幣會自動換算。請與您的運費設定保持一致。",
     "video_alt_text": "為使用輔助技術的使用者描述影片",
     "video_autoplay": "影片預設為靜音播放",
     "video_external": "使用 YouTube 或 Vimeo 網址",
