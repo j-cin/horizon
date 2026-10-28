@@ -20,8 +20,8 @@
     data-total="{{ cart.total_price }}"
     data-currency="{{ cart.currency.iso_code }}"
     data-money-format="{{ shop.money_format | strip_html | escape }}"
-    data-remaining-template="{{ 'content.free_shipping_remaining' | t: amount: '[amount]' | escape }}"
-    data-unlocked-message="{{ 'content.free_shipping_unlocked' | t | escape }}"
+    data-remaining-template="{{ 'content.free_shipping_remaining' | t: amount: '[amount]' | escape_once }}"
+    data-unlocked-message="{{ 'content.free_shipping_unlocked' | t | escape_once }}"
     {% if remaining == 0 %}
       data-unlocked
     {% endif %}
