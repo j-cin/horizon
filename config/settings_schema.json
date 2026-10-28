@@ -1550,6 +1550,23 @@
       },
       {
         "type": "checkbox",
+        "id": "show_cart_complementary_products",
+        "label": "t:settings.complementary_products_in_cart",
+        "info": "t:content.complementary_products",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "cart_complementary_products_count",
+        "label": "t:settings.product_count",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 3,
+        "visible_if": "{{ settings.show_cart_complementary_products }}"
+      },
+      {
+        "type": "checkbox",
         "id": "show_installments",
         "label": "t:settings.installments",
         "default": true

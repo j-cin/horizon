@@ -177,6 +177,7 @@
     "cart_total": "Cart total",
     "checkout": "Check out",
     "collection_placeholder": "Collection title",
+    "complementary_products_heading": "Pairs well with",
     "discount_code": "Discount code",
     "shipping_discount_error": "Shipping discounts are shown at checkout after adding an address",
     "discount_code_error": "Discount code cannot be applied to your cart",

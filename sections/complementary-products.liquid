@@ -1,0 +1,66 @@
+{% comment %}
+  Section Rendering API target for `complementary-products.js`, requested through the Product
+  Recommendations API with `intent=complementary`. It has no presets, so it's never added to a template.
+  https://shopify.dev/docs/storefronts/themes/product-merchandising/recommendations
+
+  [data-product-id] - lets the component leave out products that are already in the cart
+{% endcomment %}
+
+{% render 'complementary-products-styles' %}
+<ul data-complementary-products-list>
+  {%- for product in recommendations.products -%}
+    {%- unless product.available -%}
+      {%- continue -%}
+    {%- endunless -%}
+    <li
+      class="complementary-products__item"
+      data-product-id="{{ product.id }}"
+    >
+      <a
+        href="{{ product.url }}"
+        class="complementary-products__media"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        {%- if product.featured_media -%}
+          {{
+            product.featured_media
+            | image_url: width: 192
+            | image_tag: widths: '96, 192', sizes: '96px', loading: 'lazy', alt: ''
+          }}
+        {%- else -%}
+          {{ 'product-1' | placeholder_svg_tag }}
+        {%- endif -%}
+      </a>
+
+      <div class="complementary-products__details">
+        <a
+          href="{{ product.url }}"
+          class="complementary-products__title"
+        >
+          {{- product.title -}}
+        </a>
+        {% render 'price', product_resource: product %}
+      </div>
+
+      {%- if settings.quick_add or settings.mobile_quick_add -%}
+        {% render 'quick-add', product: product, section_id: section.id, product_url: product.url %}
+      {%- else -%}
+        {% # quick-add.js and the quick add modal only load when quick add is enabled %}
+        <a
+          href="{{ product.url }}"
+          class="button button-secondary complementary-products__link"
+        >
+          {{- 'actions.choose' | t }}
+          <span class="visually-hidden">{{ product.title }}</span>
+        </a>
+      {%- endif -%}
+    </li>
+  {%- endfor -%}
+</ul>
+
+{% schema %}
+{
+  "name": "t:names.complementary_products"
+}
+{% endschema %}

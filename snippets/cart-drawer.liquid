@@ -6,6 +6,7 @@
 
 {%- liquid
   assign render_wrapper = render_wrapper | default: true, allow_false: true
+  assign cart_product_ids = cart.items | map: 'product_id' | uniq | join: ','
 -%}
 
 {%- if settings.cart_type == 'drawer' and template.name != 'cart' -%}
@@ -112,6 +113,17 @@
               >
                 <scroll-hint class="cart-drawer__items">
                   {% render 'cart-products', context: 'drawer' %}
+
+                  {%- if settings.show_cart_complementary_products -%}
+                    {% # The first line item is the most recently added %}
+                    <div class="cart-drawer__complementary-products">
+                      {% render 'complementary-products',
+                        product_id: cart.items.first.product_id,
+                        limit: settings.cart_complementary_products_count,
+                        cart_product_ids: cart_product_ids
+                      %}
+                    </div>
+                  {%- endif -%}
                 </scroll-hint>
 
                 <div class="cart-drawer__summary">
@@ -186,6 +198,16 @@
     border-bottom: none;
     padding-block-end: 0;
     margin-block-end: 0;
+  }
+
+  .cart-drawer__complementary-products {
+    padding-block: var(--padding-xl);
+    border-block-start: var(--style-border-width) solid rgb(var(--color-foreground-rgb) / var(--opacity-10-25));
+  }
+
+  .cart-drawer__complementary-products:not(:has(.complementary-products__item)) {
+    padding-block: 0;
+    border-block-start: none;
   }
 
   .cart-drawer__close-button--empty {

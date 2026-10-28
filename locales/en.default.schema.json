@@ -295,6 +295,7 @@
     "collections_editorial": "Collection list: Editorial",
     "collections_grid": "Collection list: Grid",
     "colors": "Color palette",
+    "complementary_products": "Complementary products",
     "contact_form": "Contact form",
     // Name for layout container block in theme editor
     "content": "Content",
@@ -820,6 +821,7 @@
     "color_scheme": "Color scheme",
     "colors": "Colors",
     "columns": "Columns",
+    "complementary_products_in_cart": "Show complementary products",
     // Layout container block name for grouping other blocks
     "content": "Content",
     "content_alignment": "Content alignment",

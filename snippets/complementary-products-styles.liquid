@@ -1,0 +1,95 @@
+{%- doc -%}
+  Complementary products styles, shared by the snippet and the section that renders its items.
+
+  @example
+  {% render 'complementary-products-styles' %}
+{%- enddoc -%}
+
+{% render 'quick-add-styles' %}
+{% render 'price-styles' %}
+
+{% stylesheet %}
+  .complementary-products {
+    display: block;
+  }
+
+  /* The element stays in the layout while empty, so the IntersectionObserver can still fire */
+  .complementary-products:not(:has(.complementary-products__item)) .complementary-products__inner {
+    display: none;
+  }
+
+  .complementary-products__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+  }
+
+  .complementary-products__heading {
+    margin: 0;
+  }
+
+  .complementary-products__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .complementary-products__item {
+    display: grid;
+    grid-template-columns: 4rem minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--gap-md);
+  }
+
+  .complementary-products__media {
+    display: block;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: var(--style-border-radius-inputs);
+    background-color: rgb(var(--color-foreground-rgb) / var(--opacity-5));
+  }
+
+  .complementary-products__media :is(img, svg) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .complementary-products__details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2xs);
+    min-width: 0;
+  }
+
+  .complementary-products__title {
+    color: inherit;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /* Quick add is an overlay on product cards; in this list it sits inline and is always visible */
+  .complementary-products .quick-add {
+    position: relative;
+    inset: auto;
+    pointer-events: auto;
+  }
+
+  .complementary-products button.quick-add__button {
+    display: flex;
+    position: static;
+    opacity: 1;
+    max-inline-size: none;
+
+    &:disabled {
+      opacity: var(--opacity-muted-text);
+    }
+  }
+{% endstylesheet %}

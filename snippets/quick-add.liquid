@@ -4,6 +4,7 @@
   @param {object} product - The product object
   @param {string} section_id - The section ID
   @param {object} [block] - The block object
+  @param {string} [product_url] - Product page URL, for when it isn't rendered inside a product card or hotspot
 {%- enddoc -%}
 
 {% liquid
@@ -82,6 +83,9 @@
   ref="quickAdd"
   data-product-title="{{ product.title }}"
   data-product-id="{{ product.id }}"
+  {% if product_url != blank %}
+    data-product-url="{{ product_url }}"
+  {% endif %}
   data-quick-add-button="{{ initial_button }}"
   data-product-options-count="{{ product.options.size }}"
   data-uses-selling-plans="{{ uses_selling_plans }}"

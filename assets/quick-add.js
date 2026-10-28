@@ -22,7 +22,7 @@ export class QuickAddComponent extends Component {
     );
     const productLink = hotspotProduct?.getHotspotProductLink();
 
-    return productLink?.href || '';
+    return productLink?.href || this.dataset.productUrl || '';
   }
 
   /**
@@ -59,7 +59,10 @@ export class QuickAddComponent extends Component {
    */
   #handleProductSelectUpdate = (event) => {
     if (!(event.target instanceof HTMLElement)) return;
-    if (event.target.closest('product-card') !== this.closest('product-card')) return;
+    // Outside a product card (hotspots, complementary products) there's no card swatch to follow,
+    // and an unrelated variant picker on the page must not flip this button.
+    const productCard = this.closest('product-card');
+    if (!productCard || event.target.closest('product-card') !== productCard) return;
     if (this.dataset.usesSellingPlans === 'true') return;
 
     // Only flip choose <-> add when both buttons were rendered.

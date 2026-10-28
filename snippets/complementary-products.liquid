@@ -1,0 +1,48 @@
+{%- doc -%}
+  Renders complementary products for a product. `complementary-products.js` fetches them through
+  the Product Recommendations API once the list is near the viewport, and hides the list if there are none.
+
+  @param {number} product_id - The product to show complementary products for
+  @param {number} [limit] - The maximum number of products to show. Defaults to 3
+  @param {string} [heading] - The list heading. Defaults to "Pairs well with"
+  @param {string} [cart_product_ids] - Comma-separated product IDs to leave out because they're already in the cart
+
+  @example
+  {% render 'complementary-products', product_id: product.id, limit: 4 %}
+{%- enddoc -%}
+
+<script
+  src="{{ 'complementary-products.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{%- liquid
+  if heading == blank
+    assign heading = 'content.complementary_products_heading' | t
+  endif
+-%}
+
+{% render 'complementary-products-styles' %}
+
+{% comment %}
+  [data-skip-subtree-update] - keeps the fetched items when the cart drawer is morphed; the component
+  re-renders them itself when the product or cart contents change
+{% endcomment %}
+<complementary-products
+  class="complementary-products"
+  data-url="{{ routes.product_recommendations_url }}"
+  data-section-id="complementary-products"
+  data-product-id="{{ product_id }}"
+  data-limit="{{ limit | default: 3 }}"
+  data-cart-product-ids="{{ cart_product_ids }}"
+>
+  <div class="complementary-products__inner">
+    <h3 class="complementary-products__heading h5">{{ heading }}</h3>
+    <ul
+      class="complementary-products__list"
+      ref="list"
+      data-skip-subtree-update
+    ></ul>
+  </div>
+</complementary-products>
