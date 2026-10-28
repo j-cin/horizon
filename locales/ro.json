@@ -20,6 +20,7 @@
     "slider_label": "Cursor"
   },
   "accessibility": {
+    "free_shipping_progress": "Progres către livrarea gratuită",
     "play_model": "Redă modelul 3D",
     "play_video": "Redă videoclipul",
     "unit_price": "Preț unitar",
@@ -123,6 +124,8 @@
     "zoom_media": "Fă zoom pe elementul media {{ index }}"
   },
   "content": {
+    "free_shipping_remaining": "Mai aveți {{ amount }} până la livrare gratuită",
+    "free_shipping_unlocked": "Ați obținut livrare gratuită",
     "reviews": "recenzii",
     "language": "Limba",
     "localization_region_and_language": "Regiunea și limba",

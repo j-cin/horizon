@@ -20,6 +20,7 @@
     "slider_label": "投影播放器"
   },
   "accessibility": {
+    "free_shipping_progress": "免運費進度",
     "play_model": "播放 3D 模型",
     "play_video": "播放影片",
     "unit_price": "單價",
@@ -121,6 +122,8 @@
     "back_to_main_menu": "返回主選單"
   },
   "content": {
+    "free_shipping_remaining": "再購 {{ amount }} 即可免運費",
+    "free_shipping_unlocked": "您已享有免運費",
     "reviews": "評論數",
     "no_results_found": "找不到結果",
     "language": "語言",

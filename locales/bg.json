@@ -20,6 +20,7 @@
     "slider_label": "Плъзгач"
   },
   "accessibility": {
+    "free_shipping_progress": "Напредък към безплатна доставка",
     "play_model": "Възпроизвеждане на 3D модел",
     "play_video": "Възпроизвеждане на видеоклип",
     "unit_price": "Единична цена",
@@ -121,6 +122,8 @@
     "back_to_main_menu": "Назад към главното меню"
   },
   "content": {
+    "free_shipping_remaining": "Остават ви {{ amount }} до безплатна доставка",
+    "free_shipping_unlocked": "Отключихте безплатна доставка",
     "reviews": "мнения",
     "language": "Език",
     "localization_region_and_language": "Регион и език",

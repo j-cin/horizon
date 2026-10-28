@@ -182,6 +182,8 @@
     "enable_video_looping": "Videon silmukointi",
     "favicon": "Favicon",
     "font_family": "Fonttiperhe",
+    "free_shipping_bar": "Ilmaisen toimituksen edistymispalkki",
+    "free_shipping_threshold": "Ilmaisen toimituksen raja",
     "gap": "Väli",
     "geometric_translate_y": "Geometrinen muunnos Y",
     "heading": "Otsikko",
@@ -1084,6 +1086,7 @@
   },
   "info": {
     "carousel_layout_on_mobile": "Mobiilissa käytetään aina karusellia.",
+    "free_shipping_threshold": "Ostoskorin summa kauppasi oletusvaluutassa. Muunnetaan automaattisesti muille valuutoille. Sovita se toimitushintoihisi.",
     "video_alt_text": "Kuvaile video avustavan teknologian käyttäjille",
     "video_autoplay": "Videot mykistetään oletusarvoisesti",
     "video_external": "Käytä YouTube- tai Vimeo-URL-osoitetta",

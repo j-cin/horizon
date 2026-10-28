@@ -20,6 +20,7 @@
     "slider_label": "Suwak"
   },
   "accessibility": {
+    "free_shipping_progress": "Postęp do darmowej dostawy",
     "play_model": "Odtwórz model 3D",
     "play_video": "Odtwórz film",
     "unit_price": "Cena jednostkowa",
@@ -125,6 +126,8 @@
     "back_to_main_menu": "Wróć do menu głównego"
   },
   "content": {
+    "free_shipping_remaining": "Brakuje Ci {{ amount }} do darmowej dostawy",
+    "free_shipping_unlocked": "Masz darmową dostawę",
     "reviews": "recenzje",
     "language": "Język",
     "localization_region_and_language": "Region i język",

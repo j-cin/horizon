@@ -20,6 +20,7 @@
     "slider_label": "Carrusel"
   },
   "accessibility": {
+    "free_shipping_progress": "Progreso hacia el envío gratis",
     "play_model": "Reproducir el modelo 3D",
     "play_video": "Reproducir el video",
     "unit_price": "Precio unitario",
@@ -123,6 +124,8 @@
     "back_to_main_menu": "Volver al menú principal"
   },
   "content": {
+    "free_shipping_remaining": "Te faltan {{ amount }} para el envío gratis",
+    "free_shipping_unlocked": "Has conseguido envío gratis",
     "reviews": "reseñas",
     "language": "Idioma",
     "localization_region_and_language": "Región e idioma",

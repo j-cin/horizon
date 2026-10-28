@@ -20,6 +20,7 @@
     "slider_label": "Carrousel"
   },
   "accessibility": {
+    "free_shipping_progress": "Progression vers la livraison gratuite",
     "play_model": "Jouer le modèle 3D",
     "play_video": "Lire la vidéo",
     "unit_price": "Prix unitaire",
@@ -123,6 +124,8 @@
     "zoom_media": "Zoom du support multimédia {{ index }}"
   },
   "content": {
+    "free_shipping_remaining": "Plus que {{ amount }} pour bénéficier de la livraison gratuite",
+    "free_shipping_unlocked": "Vous bénéficiez de la livraison gratuite",
     "reviews": "avis",
     "language": "Langue",
     "localization_region_and_language": "Région et langue",

@@ -20,6 +20,7 @@
     "slider_label": "Controle deslizante"
   },
   "accessibility": {
+    "free_shipping_progress": "Progresso para o frete grátis",
     "play_model": "Reproduzir modelo 3D",
     "play_video": "Reproduzir vídeo",
     "unit_price": "Preço unitário",
@@ -123,6 +124,8 @@
     "back_to_main_menu": "Voltar ao menu principal"
   },
   "content": {
+    "free_shipping_remaining": "Faltam {{ amount }} para o frete grátis",
+    "free_shipping_unlocked": "Você ganhou frete grátis",
     "reviews": "avaliações",
     "language": "Idioma",
     "localization_region_and_language": "Região e idioma",

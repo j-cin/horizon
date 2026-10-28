@@ -176,6 +176,8 @@
     "custom_width": "Aangepaste breedte",
     "enable_video_looping": "Video herhalen",
     "favicon": "Favicon",
+    "free_shipping_bar": "Voortgangsbalk voor gratis verzending",
+    "free_shipping_threshold": "Drempel voor gratis verzending",
     "heading": "Kop",
     "icon": "Pictogram",
     "image_icon": "Afbeeldingspictogram",
@@ -1084,6 +1086,7 @@
   },
   "info": {
     "carousel_layout_on_mobile": "Op mobiel wordt altijd een carrousel gebruikt",
+    "free_shipping_threshold": "Winkelwagentotaal in de standaardvaluta van je winkel. Wordt automatisch omgerekend voor andere valuta. Stem dit af op je verzendtarieven.",
     "video_alt_text": "Beschrijf de video voor gebruikers van ondersteunende technologie",
     "video_autoplay": "Video's worden standaard gedempt",
     "video_external": "Gebruik een YouTube- of Vimeo-URL",

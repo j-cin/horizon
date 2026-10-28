@@ -176,6 +176,8 @@
     "custom_width": "Benutzerdefinierte Breite",
     "enable_video_looping": "Video-Wiederholung",
     "favicon": "Favicon",
+    "free_shipping_bar": "Fortschrittsbalken für kostenlosen Versand",
+    "free_shipping_threshold": "Schwellenwert für kostenlosen Versand",
     "heading": "Überschrift",
     "icon": "Symbol",
     "image_icon": "Bildsymbol",
@@ -1083,6 +1085,7 @@
     "disclosures": "Pflichtangaben"
   },
   "info": {
+    "free_shipping_threshold": "Warenkorbsumme in der Standardwährung deines Shops. Wird für andere Währungen automatisch umgerechnet. Passe sie an deine Versandtarife an.",
     "video_alt_text": "Beschreibe das Video für Benutzer von Hilfstechnologien",
     "video_autoplay": "Videos werden standardmäßig stummgeschaltet",
     "video_external": "Verwende eine YouTube- oder Vimeo-URL",

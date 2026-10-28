@@ -20,6 +20,7 @@
     "slider_label": "Slider"
   },
   "accessibility": {
+    "free_shipping_progress": "Progres menuju gratis ongkir",
     "play_model": "Putar model 3D",
     "play_video": "Putar video",
     "unit_price": "Harga satuan",
@@ -121,6 +122,8 @@
     "zoom_media": "Perbesar media {{ index }}"
   },
   "content": {
+    "free_shipping_remaining": "{{ amount }} lagi untuk mendapatkan gratis ongkir",
+    "free_shipping_unlocked": "Anda mendapatkan gratis ongkir",
     "reviews": "ulasan",
     "language": "Bahasa",
     "localization_region_and_language": "Wilayah dan bahasa",

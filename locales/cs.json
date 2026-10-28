@@ -20,6 +20,7 @@
     "slider_label": "Posuvník"
   },
   "accessibility": {
+    "free_shipping_progress": "Postup k dopravě zdarma",
     "play_model": "Přehrát 3D model",
     "play_video": "Přehrát video",
     "unit_price": "Jednotková cena",
@@ -125,6 +126,8 @@
     "back_to_main_menu": "Zpět do hlavní nabídky"
   },
   "content": {
+    "free_shipping_remaining": "Do dopravy zdarma vám chybí {{ amount }}",
+    "free_shipping_unlocked": "Máte dopravu zdarma",
     "reviews": "recen.",
     "language": "Jazyk",
     "localization_region_and_language": "Oblast a jazyk",

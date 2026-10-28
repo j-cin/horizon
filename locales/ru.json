@@ -20,6 +20,7 @@
     "slider_label": "Ползунок"
   },
   "accessibility": {
+    "free_shipping_progress": "Прогресс до бесплатной доставки",
     "play_model": "Открыть объемную модель",
     "play_video": "Воспроизвести видео",
     "unit_price": "Цена за единицу",
@@ -125,6 +126,8 @@
     "back_to_main_menu": "Назад в главное меню"
   },
   "content": {
+    "free_shipping_remaining": "До бесплатной доставки осталось {{ amount }}",
+    "free_shipping_unlocked": "Вам доступна бесплатная доставка",
     "reviews": "отз.",
     "no_results_found": "Результатов не найдено",
     "language": "Язык",

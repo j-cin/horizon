@@ -20,6 +20,7 @@
     "slider_label": "Glidefelt"
   },
   "accessibility": {
+    "free_shipping_progress": "Fremdrift mot gratis frakt",
     "play_model": "Spill av 3D-modell",
     "play_video": "Spill av video",
     "unit_price": "Enhetspris",
@@ -121,6 +122,8 @@
     "zoom_media": "Zoom medier {{ index }}"
   },
   "content": {
+    "free_shipping_remaining": "Du mangler {{ amount }} for å få gratis frakt",
+    "free_shipping_unlocked": "Du har fått gratis frakt",
     "reviews": "anmeldelser",
     "no_results_found": "Fant ingen resultater",
     "language": "Språk",

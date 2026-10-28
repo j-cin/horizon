@@ -176,6 +176,8 @@
     "custom_width": "Niestandardowa szerokość",
     "enable_video_looping": "Odtwarzanie wideo w pętli",
     "favicon": "Ikona Favicon",
+    "free_shipping_bar": "Pasek postępu darmowej dostawy",
+    "free_shipping_threshold": "Próg darmowej dostawy",
     "heading": "Nagłówek",
     "icon": "Ikona",
     "image_icon": "Ikona obrazu",
@@ -1083,6 +1085,7 @@
     "disclosures": "Informacje prawne"
   },
   "info": {
+    "free_shipping_threshold": "Wartość koszyka w domyślnej walucie sklepu. Dla innych walut przeliczana automatycznie. Dopasuj ją do stawek wysyłki.",
     "video_alt_text": "Opisz wideo dla użytkowników technologii wspomagających",
     "video_autoplay": "Domyślnie filmy będą wyciszone",
     "video_external": "Użyj adresu URL z YouTube lub Vimeo",

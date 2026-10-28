@@ -182,6 +182,8 @@
     "enable_video_looping": "Videolooping",
     "favicon": "Favorittikon",
     "font_family": "Skriftfamilie",
+    "free_shipping_bar": "Fremdriftslinje for gratis frakt",
+    "free_shipping_threshold": "Grense for gratis frakt",
     "gap": "Mellomrom",
     "geometric_translate_y": "Geometrisk translasjon Y",
     "heading": "Overskrift",
@@ -1084,6 +1086,7 @@
   },
   "info": {
     "carousel_layout_on_mobile": "Karusell brukes alltid på mobil",
+    "free_shipping_threshold": "Handlekurvens totalsum i butikkens standardvaluta. Konverteres automatisk for andre valutaer. Tilpass den til fraktprisene dine.",
     "video_alt_text": "Beskriv videoen for brukere av hjelpeteknologi",
     "video_autoplay": "Videoer dempes som standard",
     "video_external": "Bruk en URL-adresse fra YouTube eller Vimeo",

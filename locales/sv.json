@@ -20,6 +20,7 @@
     "slider_label": "Bild"
   },
   "accessibility": {
+    "free_shipping_progress": "Framsteg mot fri frakt",
     "play_model": "Spela 3D-modell",
     "play_video": "Spela video",
     "unit_price": "Enhetspris",
@@ -121,6 +122,8 @@
     "zoom_media": "Zooma media {{ index }}"
   },
   "content": {
+    "free_shipping_remaining": "{{ amount }} kvar till fri frakt",
+    "free_shipping_unlocked": "Du får fri frakt",
     "reviews": "recensioner",
     "language": "Språk",
     "localization_region_and_language": "Region och språk",

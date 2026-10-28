@@ -29,6 +29,7 @@
       "one": "{{ count }} filter applied",
       "other": "{{ count }} filters applied"
     },
+    "free_shipping_progress": "Progress towards free shipping",
     "home_logo_alt": "{{ store_name }} - Home",
     "increase_quantity": "Increase quantity",
     "inventory_status": "Inventory status",
@@ -193,6 +194,8 @@
     "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "Duties included. Shipping is calculated at checkout.",
     "featured_products": "Featured products",
     "filters": "Filters",
+    "free_shipping_remaining": "You're {{ amount }} away from free shipping",
+    "free_shipping_unlocked": "You've unlocked free shipping",
     "grid_view": {
       "default_view": "Default",
       "grid_fieldset": "Column grid",

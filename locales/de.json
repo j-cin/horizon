@@ -20,6 +20,7 @@
     "slider_label": "Slider"
   },
   "accessibility": {
+    "free_shipping_progress": "Fortschritt bis zum kostenlosen Versand",
     "play_model": "3D-Modell abspielen",
     "play_video": "Video abspielen",
     "unit_price": "Stückpreis",
@@ -121,6 +122,8 @@
     "back_to_main_menu": "Zurück zum Hauptmenü"
   },
   "content": {
+    "free_shipping_remaining": "Noch {{ amount }} bis zum kostenlosen Versand",
+    "free_shipping_unlocked": "Du erhältst kostenlosen Versand",
     "reviews": "Reviews",
     "language": "Sprache",
     "localization_region_and_language": "Region und Sprache",

@@ -1,0 +1,93 @@
+{%- doc -%}
+  Renders progress towards the free shipping threshold set in theme settings.
+  The initial state is rendered here; `free-shipping-bar.js` keeps it in sync with cart events
+  and converts the threshold for non-default currencies.
+{%- enddoc -%}
+
+{%- liquid
+  assign threshold = settings.free_shipping_threshold | times: 100 | round
+  assign remaining = threshold | minus: cart.total_price | at_least: 0
+  assign remaining_money = remaining | money | strip_html
+  if threshold > 0
+    assign progress = cart.total_price | times: 100.0 | divided_by: threshold | at_most: 100 | round
+  endif
+-%}
+
+{%- if threshold > 0 -%}
+  <free-shipping-bar
+    class="free-shipping-bar cart-primary-typography"
+    data-threshold="{{ settings.free_shipping_threshold }}"
+    data-total="{{ cart.total_price }}"
+    data-currency="{{ cart.currency.iso_code }}"
+    data-money-format="{{ shop.money_format | strip_html | escape }}"
+    data-remaining-template="{{ 'content.free_shipping_remaining' | t: amount: '[amount]' | escape_once }}"
+    data-unlocked-message="{{ 'content.free_shipping_unlocked' | t | escape_once }}"
+    {% if remaining == 0 %}
+      data-unlocked
+    {% endif %}
+  >
+    <p
+      class="free-shipping-bar__message"
+      ref="message"
+      aria-live="polite"
+    >
+      {%- if remaining > 0 -%}
+        {{- 'content.free_shipping_remaining' | t: amount: remaining_money -}}
+      {%- else -%}
+        {{- 'content.free_shipping_unlocked' | t -}}
+      {%- endif -%}
+    </p>
+    <div
+      class="free-shipping-bar__track"
+      ref="track"
+      role="progressbar"
+      aria-label="{{ 'accessibility.free_shipping_progress' | t }}"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="{{ progress }}"
+      style="--free-shipping-progress: {{ progress }};"
+    >
+      <div class="free-shipping-bar__fill"></div>
+    </div>
+  </free-shipping-bar>
+{%- endif -%}
+
+{% stylesheet %}
+  .free-shipping-bar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+    width: 100%;
+  }
+
+  .free-shipping-bar__message {
+    margin: 0;
+  }
+
+  .free-shipping-bar__track {
+    height: 6px;
+    border-radius: 3px;
+    background-color: rgb(var(--color-foreground-rgb) / var(--opacity-10-25));
+    overflow: hidden;
+  }
+
+  .free-shipping-bar__fill {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: var(--color-foreground);
+    transform: scaleX(calc(var(--free-shipping-progress, 0) / 100));
+    transform-origin: left;
+    transition: transform var(--animation-speed-medium) var(--animation-easing);
+  }
+
+  [dir='rtl'] .free-shipping-bar__fill {
+    transform-origin: right;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .free-shipping-bar__fill {
+      transition: none;
+    }
+  }
+{% endstylesheet %}

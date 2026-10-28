@@ -182,6 +182,8 @@
     "enable_video_looping": "Loopa video",
     "favicon": "Favoritikon",
     "font_family": "Teckensnittsfamilj",
+    "free_shipping_bar": "Förloppsindikator för fri frakt",
+    "free_shipping_threshold": "Gräns för fri frakt",
     "gap": "Mellanrum",
     "geometric_translate_y": "Geometrisk translate Y",
     "heading": "Rubrik",
@@ -1083,6 +1085,7 @@
     "disclosures": "Upplysningar"
   },
   "info": {
+    "free_shipping_threshold": "Varukorgens summa i butikens standardvaluta. Räknas om automatiskt för andra valutor. Anpassa den efter dina fraktpriser.",
     "video_alt_text": "Beskriv videon för användare av hjälpmedelsteknik",
     "video_autoplay": "Videor kommer att vara tystade som standard",
     "video_external": "Använd en URL från YouTube eller Vimeo",

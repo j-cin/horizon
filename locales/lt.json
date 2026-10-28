@@ -20,6 +20,7 @@
     "slider_label": "Slankiklis"
   },
   "accessibility": {
+    "free_shipping_progress": "Pažanga iki nemokamo pristatymo",
     "play_model": "Paleisti 3D modelį",
     "play_video": "Paleisti vaizdo įrašą",
     "unit_price": "Vieneto kaina",
@@ -125,6 +126,8 @@
     "back_to_main_menu": "Atgal į pagrindinį meniu"
   },
   "content": {
+    "free_shipping_remaining": "Iki nemokamo pristatymo trūksta {{ amount }}",
+    "free_shipping_unlocked": "Jums taikomas nemokamas pristatymas",
     "reviews": "apžvalgos (-ų; -a)",
     "language": "Kalba",
     "localization_region_and_language": "Regionas ir kalba",

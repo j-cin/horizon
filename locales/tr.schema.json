@@ -176,6 +176,8 @@
     "custom_width": "Özel genişlik",
     "enable_video_looping": "Video döngüsü",
     "favicon": "Favicon",
+    "free_shipping_bar": "Ücretsiz kargo ilerleme çubuğu",
+    "free_shipping_threshold": "Ücretsiz kargo eşiği",
     "heading": "Başlık",
     "icon": "Simge",
     "image_icon": "Görsel simge",
@@ -1083,6 +1085,7 @@
     "disclosures": "Bildirimler"
   },
   "info": {
+    "free_shipping_threshold": "Mağazanızın varsayılan para birimindeki sepet toplamı. Diğer para birimleri için otomatik olarak dönüştürülür. Kargo ücretlerinizle eşleştirin.",
     "video_alt_text": "Yardımcı teknoloji kullanıcıları için videoyu açıklayın",
     "video_autoplay": "Videolar varsayılan olarak sessize alınır",
     "video_external": "Bir YouTube veya Vimeo URL'si kullanın",

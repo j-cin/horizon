@@ -176,6 +176,8 @@
     "custom_width": "사용자 지정 너비",
     "enable_video_looping": "동영상 반복",
     "favicon": "Favicon",
+    "free_shipping_bar": "무료 배송 진행률 표시줄",
+    "free_shipping_threshold": "무료 배송 기준 금액",
     "heading": "제목",
     "icon": "아이콘",
     "image_icon": "이미지 아이콘",
@@ -1084,6 +1086,7 @@
   },
   "info": {
     "carousel_layout_on_mobile": "모바일에서는 항상 캐러셀이 사용됩니다.",
+    "free_shipping_threshold": "스토어 기본 통화 기준 장바구니 합계입니다. 다른 통화는 자동으로 환산됩니다. 배송료 설정과 일치시키세요.",
     "video_alt_text": "보조 기술 사용자를 위해 비디오를 설명하세요",
     "video_autoplay": "비디오는 기본적으로 음소거됩니다",
     "video_external": "YouTube 또는 Vimeo URL을 사용하세요",

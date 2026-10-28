@@ -20,6 +20,7 @@
     "slider_label": "Ρυθμιστικό"
   },
   "accessibility": {
+    "free_shipping_progress": "Πρόοδος προς τη δωρεάν αποστολή",
     "play_model": "Αναπαραγωγή μοντέλου 3D",
     "play_video": "Αναπαραγωγή βίντεο",
     "unit_price": "Τιμή μονάδας",
@@ -121,6 +122,8 @@
     "back_to_main_menu": "Επιστροφή στο κύριο μενού"
   },
   "content": {
+    "free_shipping_remaining": "Σας λείπουν {{ amount }} για δωρεάν αποστολή",
+    "free_shipping_unlocked": "Ξεκλειδώσατε τη δωρεάν αποστολή",
     "reviews": "κριτικές",
     "no_results_found": "Δεν βρέθηκαν αποτελέσματα",
     "language": "Γλώσσα",

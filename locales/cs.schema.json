@@ -182,6 +182,8 @@
     "enable_video_looping": "Opakování videa",
     "favicon": "Favikona",
     "font_family": "Rodina písma",
+    "free_shipping_bar": "Ukazatel postupu k dopravě zdarma",
+    "free_shipping_threshold": "Hranice pro dopravu zdarma",
     "gap": "Mezera",
     "geometric_translate_y": "Geometrický posun na ose Y",
     "heading": "Nadpis",
@@ -1083,6 +1085,7 @@
     "disclosures": "Prohlášení"
   },
   "info": {
+    "free_shipping_threshold": "Celková částka košíku ve výchozí měně obchodu. Pro ostatní měny se přepočítá automaticky. Sladěte ji se sazbami za dopravu.",
     "video_alt_text": "Popište video pro uživatele asistivních technologií",
     "video_autoplay": "Videa budou ve výchozím nastavení ztlumená",
     "video_external": "Použijte URL z YouTube nebo Vimeo",

@@ -8,6 +8,10 @@
 {% render 'text-component-shimmer-styles' %}
 {% render 'cart-typography-styles' %}
 
+{% if settings.show_free_shipping_bar %}
+  {% render 'free-shipping-bar' %}
+{% endif %}
+
 <div class="cart-totals">
   {% # We need to keep this node in place to allow morphing to work properly # %}
   <div class="cart-totals__original-container cart-primary-typography">

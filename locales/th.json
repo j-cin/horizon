@@ -20,6 +20,7 @@
     "slider_label": "แถบเลื่อน"
   },
   "accessibility": {
+    "free_shipping_progress": "ความคืบหน้าสู่การจัดส่งฟรี",
     "play_model": "เล่นโมเดล 3 มิติ",
     "play_video": "เล่นวิดีโอ",
     "unit_price": "ราคาต่อหน่วย",
@@ -121,6 +122,8 @@
     "back_to_main_menu": "กลับไปที่เมนูหลัก"
   },
   "content": {
+    "free_shipping_remaining": "อีก {{ amount }} เพื่อรับการจัดส่งฟรี",
+    "free_shipping_unlocked": "คุณได้รับการจัดส่งฟรีแล้ว",
     "reviews": "รีวิว",
     "language": "ภาษา",
     "localization_region_and_language": "ภูมิภาคและภาษา",

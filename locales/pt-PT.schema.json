@@ -182,6 +182,8 @@
     "enable_video_looping": "Repetição de vídeo",
     "favicon": "Favicon",
     "font_family": "Família de tipos de letra",
+    "free_shipping_bar": "Barra de progresso de portes grátis",
+    "free_shipping_threshold": "Valor mínimo para portes grátis",
     "gap": "Espaçamento",
     "geometric_translate_y": "Translação geométrica Y",
     "heading": "Título",
@@ -1083,6 +1085,7 @@
     "disclosures": "Divulgações"
   },
   "info": {
+    "free_shipping_threshold": "Total do carrinho na moeda predefinida da loja. Convertido automaticamente para outras moedas. Deve corresponder às suas taxas de envio.",
     "video_alt_text": "Descreva o vídeo para utilizadores de tecnologia de apoio",
     "video_autoplay": "Os vídeos serão silenciados por predefinição",
     "video_external": "Utilize um URL do YouTube ou do Vimeo",

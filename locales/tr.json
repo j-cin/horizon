@@ -20,6 +20,7 @@
     "slider_label": "Kaydırıcı"
   },
   "accessibility": {
+    "free_shipping_progress": "Ücretsiz kargoya ilerleme",
     "play_model": "3B modeli oynat",
     "play_video": "Videoyu oynat",
     "unit_price": "Birim fiyatı",
@@ -121,6 +122,8 @@
     "zoom_media": "Medyayı yakınlaştır: {{ index }}"
   },
   "content": {
+    "free_shipping_remaining": "Ücretsiz kargo için {{ amount }} kaldı",
+    "free_shipping_unlocked": "Ücretsiz kargo kazandınız",
     "reviews": "değerlendirme",
     "language": "Dil",
     "localization_region_and_language": "Bölge ve dil",

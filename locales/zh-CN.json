@@ -20,6 +20,7 @@
     "slider_label": "滑块"
   },
   "accessibility": {
+    "free_shipping_progress": "免运费进度",
     "play_model": "演示 3D 模型",
     "play_video": "播放视频",
     "unit_price": "单价",
@@ -121,6 +122,8 @@
     "back_to_main_menu": "返回主菜单"
   },
   "content": {
+    "free_shipping_remaining": "再购 {{ amount }} 即可免运费",
+    "free_shipping_unlocked": "您已享受免运费",
     "reviews": "评价",
     "no_results_found": "未找到结果",
     "language": "语言",

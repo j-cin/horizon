@@ -20,6 +20,7 @@
     "slider_label": "Liukusäädin"
   },
   "accessibility": {
+    "free_shipping_progress": "Edistyminen kohti ilmaista toimitusta",
     "play_model": "Toista 3D-malli",
     "play_video": "Toista video",
     "unit_price": "Yksikköhinta",
@@ -121,6 +122,8 @@
     "back_to_main_menu": "Takaisin päävalikkoon"
   },
   "content": {
+    "free_shipping_remaining": "Ilmaiseen toimitukseen puuttuu {{ amount }}",
+    "free_shipping_unlocked": "Saat ilmaisen toimituksen",
     "reviews": "arvostelua",
     "language": "Kieli",
     "localization_region_and_language": "Alue ja kieli",

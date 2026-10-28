@@ -20,6 +20,7 @@
     "slider_label": "Billedkarrusel"
   },
   "accessibility": {
+    "free_shipping_progress": "Fremskridt mod gratis fragt",
     "play_model": "Afspil 3D-model",
     "play_video": "Afspil video",
     "unit_price": "Stykpris",
@@ -121,6 +122,8 @@
     "back_to_main_menu": "Tilbage til hovedmenu"
   },
   "content": {
+    "free_shipping_remaining": "Du mangler {{ amount }} for at få gratis fragt",
+    "free_shipping_unlocked": "Du har fået gratis fragt",
     "reviews": "anmeldelser",
     "language": "Sprog",
     "localization_region_and_language": "Område og sprog",
